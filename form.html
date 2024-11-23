@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctanos</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="max-w-lg mx-auto mt-10 bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold text-center text-gray-800">Contáctanos</h1>
+        <p class="text-gray-600 text-center mt-2">¡Nos encantaría saber de ti!</p>
+        
+<!-- contactanos -->
+        <form 
+            action="https://formspree.io/f/tu-endpoint" 
+            method="POST" 
+            class="mt-6"
+        >
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Nombre completo:</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Escribe tu nombre" 
+                    required 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                >
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Escribe tu correo" 
+                    required 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                >
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Mensaje:</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    placeholder="Escribe tu mensaje aquí..." 
+                    required 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                ></textarea>
+            </div>
+            <button 
+                type="submit" 
+                class="w-full bg-indigo-600 text-white font-medium py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+                Enviar
+            </button>
+        </form>
+
+        <div class="text-center mt-6 text-gray-600">
+            <p>¿Prefieres otro canal? Escríbenos en <a href="https://tewin.com/GrupoKarsamn" target="_blank" class="text-indigo-500 hover:underline">Tewin</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

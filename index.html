@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pianos López</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#4f46e5',
+            secondary: '#64748b',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+        },
+      },
+      plugins: [require('@tailwindcss/typography')],
+    };
+  </script>
+</head>
+<body class="bg-gray-50 font-sans">
+  <!-- Header -->
+  <header class="bg-neutral-950 text-white shadow-lg fixed top-0 left-0 w-full z-50">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-6">
+      <!-- Logo -->
+      <a href="#" class="text-2xl font-bold text-primary hover:text-white">Pianos López</a>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-8">
+        <li><a href="#" class="text-lg font-semibold hover:text-primary">Inicio</a></li>
+        <li><a href="#servicios" class="text-lg font-semibold hover:text-primary">Servicios</a></li>
+        <li><a href="#valores" class="text-lg font-semibold hover:text-primary">Valores</a></li>
+        <li><a href="#cuidados-piano" class="text-lg font-semibold hover:text-primary">Cuidados</a></li>
+        <li><a href="#form" class="text-lg font-semibold hover:text-primary">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative h-screen">
+    <!-- Video Background -->
+    <video 
+      class="absolute top-0 left-0 w-full h-full object-cover filter grayscale" 
+      src="https://eubzkoywhckxuyrjsrje.supabase.co/storage/v1/object/public/website/line-waves.webm?t=2024-03-19T22%3A09%3A07.266Z" 
+      autoplay 
+      muted 
+      loop 
+      playsinline>
+    </video>
+    <!-- Overlay -->
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+    <!-- Content -->
+    <div class="relative flex flex-col items-center justify-center text-white h-full">
+      <!-- Logo -->
+      <div class="mb-6">
+        <img src="./images/logo.png" alt="Logotipo Pianos López" class="w-40 sm:w-48 md:w-56 lg:w-64 xl:w-72">
+      </div>
+      <!-- Text -->
+      <h1 class="text-5xl md:text-7xl font-bold drop-shadow-lg">Pianos López</h1>
+      <p class="text-lg md:text-2xl mt-4 drop-shadow-lg text-center mx-auto max-w-2xl">
+        Con más de 8 décadas de experiencia, he afinado y cuidado pianos para músicos profesionales, familias y conservatorios.
+      </p>
+    </div>
+  </section>
+
+  <!-- Servicios Section -->
+  <section id="servicios" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestros Servicios</h2>
+      <p class="text-gray-600 mb-10">Ofrecemos afinación, reparación y más.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div class="bg-slate-900 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <img src="./images/afinacion.jpg" alt="Afinación" class="rounded-md mb-4 shadow-lg">
+          <h3 class="text-xl font-bold mb-2">Afinación</h3>
+          <p>Afinamos pianos con precisión y cuidado profesional.</p>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-slate-900 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <!-- Video Background -->
+          <video 
+            class="rounded-md mb-4 shadow-lg w-full h-48 object-cover" 
+            src="./images/reparacion.mp4" 
+            autoplay 
+            muted 
+            loop 
+            playsinline>
+          </video>
+          <h3 class="text-xl font-bold mb-2">Reparación</h3>
+          <p>Devolvemos a tu piano su mejor sonido.</p>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-slate-900 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+          <img src="./images/venta.jpg" alt="Venta de Pianos" class="rounded-md mb-4 shadow-lg">
+          <h3 class="text-xl font-bold mb-2">Venta de Pianos</h3>
+          <p>Encuentra el piano ideal para tu hogar o estudio.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Valores Section -->
+  <section id="valores" class="relative py-20">
+    <!-- Background Image -->
+    <div class="absolute inset-0 bg-[url('./images/fondo.jpg')] bg-cover bg-center opacity-20"></div>
+    <!-- Content -->
+    <div class="relative container mx-auto text-center">
+      <!-- Logo -->
+      <div class="mb-8">
+        <img src="./images/logo.png" alt="Logotipo Pianos López" class="w-32 sm:w-40 md:w-48 lg:w-64 xl:w-80 mx-auto">
+      </div>
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestros Valores</h2>
+      <p class="text-gray-600 mb-10 max-w-3xl mx-auto">
+        Nos guiamos por valores que reflejan nuestra dedicación a la excelencia y nuestro amor por la música.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 text-left">
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-primary mb-4">Compromiso con la calidad</h3>
+          <p>Cada piano es único, y lo tratamos como una obra de arte, asegurándonos de preservar su autenticidad.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-primary mb-4">Innovación continua</h3>
+          <p>Utilizamos herramientas y métodos modernos, combinándolos con técnicas tradicionales perfeccionadas a lo largo de décadas.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-primary mb-4">Pasión por la música</h3>
+          <p>Entendemos el impacto emocional y cultural de un piano, y trabajamos para que su sonido inspire a generaciones.</p>
+        </div>
+        <div class="bg-white bg-opacity-90 rounded-lg shadow-md p-6 hover:shadow-lg transition">
+          <h3 class="text-xl font-bold text-primary mb-4">Cercanía con nuestros clientes</h3>
+          <p>Cada proyecto se realiza de manera personalizada, escuchando las necesidades de los propietarios y respetando sus historias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Carussel de las americas-->
+  <section id="cuidados-piano" class="py-20">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold text-gray-800 mb-50">Cuidados del Piano</h2>
+      <p class="text-gray-600 mb-10">Conoce los mejores consejos para mantener tu piano en perfectas condiciones y prolongar su vida útil.</p>
+  
+      <div class="carousel relative w-full max-w-[96rem] mx-auto bg-gray-100 flex justify-center items-center min-h-screen">
+        <!-- Carousel Wrapper -->
+        <div class="carousel-inner relative overflow-hidden flex justify-center items-center">
+          <!-- Slide 1 -->
+          <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="1">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img class="rounded-t-lg w-full h-96 object-cover" src="./images/afinacion.jpg" alt="Afinación Regular">
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold mb-4">Afinación Regular</h3>
+              <p class="text-lg">
+                Es fundamental afinar el piano cada 4 a 6 meses, ya que las cuerdas tienden a perder tensión debido a cambios climáticos y el uso continuo. 
+                Una afinación regular asegura que el piano mantenga un tono perfecto, evita daños a largo plazo en las cuerdas y protege la calidad del sonido.
+                Sin afinación, el piano puede generar tensiones desiguales en el marco, comprometiendo su estructura.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Slide 2 -->
+          <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="2">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img class="rounded-t-lg w-full h-96 object-cover" src="./images/limpieza.jpg" alt="Limpieza Regular">
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold mb-4">Limpieza Adecuada</h3>
+              <p class="text-lg">
+                Limpiar las teclas y superficies externas con un paño seco y suave no solo mantiene el piano atractivo visualmente, sino que evita
+                que partículas de polvo ingresen al mecanismo interno. 
+                Evitar productos líquidos es crucial, ya que la humedad puede dañar las partes de madera y afectar la resonancia.
+                Un piano limpio garantiza que el sistema mecánico funcione sin obstrucciones.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Slide 3 -->
+          <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="3">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img class="rounded-t-lg w-full h-96 object-cover" src="./images/ubicacion.jpg" alt="Ubicación del Piano">
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold mb-4">Ubicación del Piano</h3>
+              <p class="text-lg">
+                Colocar el piano lejos de ventanas, fuentes de calor o radiadores es vital para preservar la integridad de la madera y evitar deformaciones.
+                La exposición directa al sol no solo afecta el acabado estético, sino que también puede debilitar la estructura interna con el tiempo.
+                Ubicar el piano en un ambiente con temperatura y humedad controladas prolonga su vida útil significativamente.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Slide 4 -->
+          <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="4">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img class="rounded-t-lg w-full h-96 object-cover" src="./images/humedad.png" alt="Humedad Controlada">
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold mb-4">Control de Humedad</h3>
+              <p class="text-lg">
+                Mantener un nivel de humedad entre 40-60% evita que la madera se expanda o contraiga excesivamente, lo que puede afectar la afinación
+                y el mecanismo interno. 
+                Usar un humidificador o deshumidificador según el clima local ayuda a mantener la estabilidad estructural y sonora del piano.
+                Un nivel inadecuado de humedad puede provocar grietas en la madera y cuerdas oxidadas.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Slide 5 -->
+          <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="5">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img class="rounded-t-lg w-full h-96 object-cover" src="./images/mantenimiento.jpg" alt="Mantenimiento Profesional">
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold mb-4">Mantenimiento Profesional</h3>
+              <p class="text-lg">
+                Contratar técnicos especializados para revisiones periódicas asegura que todos los componentes internos, como martillos y cuerdas,
+                estén en óptimas condiciones. 
+                Las reparaciones tempranas pueden evitar daños mayores y costosos en el futuro. Un piano que recibe mantenimiento profesional conserva su valor.
+              </p>
+            </div>
+          </div>
+  
+          <!-- Slide 6 -->
+          <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="6">
+            <div class="relative overflow-hidden bg-cover bg-no-repeat">
+              <img class="rounded-t-lg w-full h-96 object-cover" src="./images/proteccion.png" alt="Protección del Piano">
+            </div>
+            <div class="p-8">
+              <h3 class="text-xl font-bold mb-4">Protección del Piano</h3>
+              <p class="text-lg">
+                Usar cubiertas protectoras es una manera simple pero efectiva de evitar el polvo, lo que puede obstruir el mecanismo y afectar la calidad del sonido. 
+                No coloques objetos pesados sobre el piano, ya que pueden dañar la tapa y generar presión innecesaria en el marco.
+                Un piano protegido conserva su aspecto y funcionalidad por años.
+              </p>
+            </div>
+          </div>
+        </div>
+           <!-- Slide 7 -->
+          <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="7">
+             <div class="relative overflow-hidden bg-cover bg-no-repeat">
+               <img class="rounded-t-lg w-full h-96 object-cover" src="./images/mudanza.png" alt="Movimiento y Mudanza">
+            </div>
+             <div class="p-8">
+              <h3 class="text-xl font-bold mb-4">Movimiento y Mudanza</h3>
+              <p class="text-lg">
+                 Mover un piano requiere planificación y herramientas especializadas. Utiliza ruedas de transporte o solicita ayuda profesional para evitar dañar el instrumento o la estructura.
+                 No intentes moverlo solo, ya que su peso puede generar tensiones internas si no se maneja correctamente.
+                 Planificar el traslado garantiza que el piano llegue en perfectas condiciones a su nuevo destino.
+               </p>
+             </div>
+           </div>
+
+            <!-- Slide 8 -->
+            <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="8">
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-lg w-full h-96 object-cover" src="./images/temperatura.jpg" alt="Control de Temperatura">
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-bold mb-4">Control de Temperatura</h3>
+                <p class="text-lg">
+                  Mantén el piano en un ambiente con temperaturas estables para evitar que la madera se expanda o contraiga. 
+                  Los cambios bruscos de temperatura pueden afectar la afinación y causar grietas en la estructura.
+                  Un ambiente controlado preserva tanto la calidad estética como funcional del piano.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 9 -->
+            <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="9">
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-lg w-full h-96 object-cover" src="./images/action.jpg" alt="Revisión de Martillos">
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-bold mb-4">Revisión de Martillos</h3>
+                <p class="text-lg">
+                  Los martillos deben revisarse regularmente para asegurar un impacto preciso en las cuerdas. 
+                  Si están desgastados o desalineados, el sonido del piano puede volverse desigual.
+                  La revisión y alineación profesional garantiza un rendimiento óptimo del piano.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 10 -->
+            <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="10">
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-lg w-full h-96 object-cover" src="./images/cuerdas.jpg" alt="Revisión de Cuerdas">
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-bold mb-4">Revisión de Cuerdas</h3>
+                <p class="text-lg">
+                  Las cuerdas deben mantenerse tensas y libres de corrosión. 
+                  La oxidación o acumulación de suciedad puede comprometer la calidad del sonido.
+                  Una revisión periódica por un técnico garantiza que cada nota suene clara y vibrante.
+                </p>
+              </div>
+            </div>
+
+            <!-- Slide 11 -->
+            <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="11">
+              <div class="relative overflow-hidden bg-cover bg-no-repeat">
+                <img class="rounded-t-lg w-full h-96 object-cover" src="./images/accesorios.jpg" alt="Uso de Accesorios">
+              </div>
+              <div class="p-8">
+                <h3 class="text-xl font-bold mb-4">Uso de Accesorios</h3>
+                <p class="text-lg">
+                  Protege el piano con bancos ajustables y pedales adecuados para garantizar una experiencia cómoda y evitar daños accidentales. 
+                  Los accesorios de calidad contribuyen al mantenimiento y prolongan la vida útil del instrumento.
+                  Considera protectores para evitar que las teclas se desgasten por el uso constante.
+                </p>
+              </div>
+            </div>
+  
+        <!-- Carousel Controls -->
+        <button class="carousel-prev absolute left-4 bg-gray-500 text-white rounded-full w-12 h-12 flex justify-center items-center">&#x276E;</button>
+        <button class="carousel-next absolute right-4 bg-gray-500 text-white rounded-full w-12 h-12 flex justify-center items-center">&#x276F;</button>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Script -->
+  <script>
+    const slides = document.querySelectorAll('.carousel .block');
+    let currentIndex = 0;
+  
+    slides[currentIndex].classList.remove('hidden');
+  
+    document.querySelector('.carousel-prev').addEventListener('click', () => {
+      slides[currentIndex].classList.add('hidden');
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+      slides[currentIndex].classList.remove('hidden');
+    });
+  
+    document.querySelector('.carousel-next').addEventListener('click', () => {
+      slides[currentIndex].classList.add('hidden');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.remove('hidden');
+    });
+  </script>
+  
+    <div id="form" class="max-w-lg mx-auto mt-10 bg-white p-6 rounded-lg shadow-lg">
+        <h1 class="text-2xl font-bold text-center text-gray-800">Contáctanos</h1>
+        <p class="text-gray-600 text-center mt-2">¡Nos encantaría saber de ti!</p>
+        
+        <form action="/submit" method="POST" class="mt-6">
+            <div class="mb-4">
+                <label for="name" class="block text-sm font-medium text-gray-700">Nombre completo:</label>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Escribe tu nombre" 
+                    required 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                >
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico:</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Escribe tu correo" 
+                    required 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                >
+            </div>
+            <div class="mb-4">
+                <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono:</label>
+                <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    placeholder="Escribe tu número de teléfono" 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                >
+            </div>
+            <div class="mb-4">
+                <label for="message" class="block text-sm font-medium text-gray-700">Mensaje:</label>
+                <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="4" 
+                    placeholder="Escribe tu mensaje aquí..." 
+                    required 
+                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+                ></textarea>
+            </div>
+            <button 
+                type="submit" 
+                class="w-full bg-gray-900 text-white font-medium py-2 px-4 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+            >
+                Enviar
+            </button>
+        </form>
+        
+        
+    </div>
+  </footer>
+</body>
+</html>
