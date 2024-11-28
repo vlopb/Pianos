@@ -25,10 +25,13 @@
 </head>
 <body class="bg-gray-50 font-sans">
   <!-- Header -->
-  <header class="bg-neutral-950 text-white shadow-lg fixed top-0 left-0 w-full z-50">
+  <header class="bg-neutral-950 text-white fixed top-0 left-0 w-full z-50 shadow-[0px_2px_9px_rgba(195,195,195,0.8)]">
     <nav class="container mx-auto flex justify-between items-center py-4 px-6">
-      <!-- Logo -->
-      <a href="#" class="text-2xl font-bold text-primary hover:text-white">Pianos López</a>
+      <!-- Logo e Imagen -->
+      <div class="flex items-center space-x-4">
+        <img src="./images/logo.png" alt="Logotipo Pianos López" class="w-10 h-10 rounded-full">
+        <a href="#" class="text-2xl font-bold text-primary hover:text-white">Pianos López</a>
+      </div>
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8">
         <li><a href="#" class="text-lg font-semibold hover:text-primary">Inicio</a></li>
@@ -39,6 +42,7 @@
       </ul>
     </nav>
   </header>
+  
 
   <!-- Hero Section -->
   <section class="relative h-screen">
@@ -68,40 +72,48 @@
   </section>
 
   <!-- Servicios Section -->
-  <section id="servicios" class="py-20">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestros Servicios</h2>
-      <p class="text-gray-600 mb-10">Ofrecemos afinación, reparación y más.</p>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <!-- Card 1 -->
-        <div class="bg-slate-900 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
-          <img src="./images/afinacion.jpg" alt="Afinación" class="rounded-md mb-4 shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Afinación</h3>
-          <p>Afinamos pianos con precisión y cuidado profesional.</p>
-        </div>
-        <!-- Card 2 -->
-        <div class="bg-slate-900 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
-          <!-- Video Background -->
-          <video 
-            class="rounded-md mb-4 shadow-lg w-full h-48 object-cover" 
-            src="./images/reparacion.mp4" 
-            autoplay 
-            muted 
-            loop 
-            playsinline>
-          </video>
-          <h3 class="text-xl font-bold mb-2">Reparación</h3>
-          <p>Devolvemos a tu piano su mejor sonido.</p>
-        </div>
-        <!-- Card 3 -->
-        <div class="bg-slate-900 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
-          <img src="./images/venta.jpg" alt="Venta de Pianos" class="rounded-md mb-4 shadow-lg">
-          <h3 class="text-xl font-bold mb-2">Venta de Pianos</h3>
-          <p>Encuentra el piano ideal para tu hogar o estudio.</p>
+    <section id="servicios" class="py-20">
+      <div class="container mx-auto text-center">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Nuestros Servicios</h2>
+        <p class="text-gray-600 mb-10">Ofrecemos afinación, reparación y más.</p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Card 1 -->
+          <div class="bg-gray-950 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+            <img 
+              src="./images/afinacion.jpg" 
+              alt="Afinación" 
+              class="rounded-md mb-4 shadow-lg h-48 w-full object-cover"
+            >
+            <h3 class="text-xl font-bold mb-2">Afinación</h3>
+            <p>Afinamos pianos con precisión y cuidado profesional.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="bg-gray-950 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+            <video 
+              class="rounded-md mb-4 shadow-lg h-48 w-full object-cover" 
+              src="https://grupokarsam.com/pianoslopez.com/images/reparacion.mp4" 
+              autoplay 
+              muted 
+              loop 
+              playsinline>
+            </video>
+            <h3 class="text-xl font-bold mb-2">Reparación</h3>
+            <p>Devolvemos a tu piano su mejor sonido.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="bg-gray-950 text-white rounded-lg shadow-lg p-6 hover:shadow-xl transition">
+            <img 
+              src="./images/venta.jpg" 
+              alt="Venta de Pianos" 
+              class="rounded-md mb-4 shadow-lg h-48 w-full object-cover"
+            >
+            <h3 class="text-xl font-bold mb-2">Venta de Pianos</h3>
+            <p>Encuentra el piano ideal para tu hogar o estudio.</p>
+          </div>
         </div>
       </div>
-    </div>
   </section>
+  
 
   <!-- Valores Section -->
   <section id="valores" class="relative py-20">
@@ -139,8 +151,8 @@
   </section>
   <!-- Carussel de las americas-->
   <section id="cuidados-piano" class="py-20">
-    <div class="container mx-auto text-center">
-      <h2 class="text-3xl font-bold text-gray-800 mb-50">Cuidados del Piano</h2>
+    <div class="bg-black-300 container mx-auto text-center">
+      <h2 class="text-2xl font-bold text-gray-800 mb-50">Cuidados del Piano</h2>
       <p class="text-gray-600 mb-10">Conoce los mejores consejos para mantener tu piano en perfectas condiciones y prolongar su vida útil.</p>
   
       <div class="carousel relative w-full max-w-[96rem] mx-auto bg-gray-100 flex justify-center items-center min-h-screen">
@@ -176,8 +188,7 @@
               </p>
             </div>
           </div>
-  
-          <!-- Slide 3 -->
+            <!-- Slide 3 -->
           <div class="block max-w-[48rem] w-full rounded-lg bg-white shadow-lg hidden" data-slide="3">
             <div class="relative overflow-hidden bg-cover bg-no-repeat">
               <img class="rounded-t-lg w-full h-96 object-cover" src="./images/ubicacion.jpg" alt="Ubicación del Piano">
@@ -340,66 +351,66 @@
     });
   </script>
   
-    <div id="form" class="max-w-lg mx-auto mt-10 bg-white p-6 rounded-lg shadow-lg">
-        <h1 class="text-2xl font-bold text-center text-gray-800">Contáctanos</h1>
-        <p class="text-gray-600 text-center mt-2">¡Nos encantaría saber de ti!</p>
-        
-        <form action="/submit" method="POST" class="mt-6">
-            <div class="mb-4">
-                <label for="name" class="block text-sm font-medium text-gray-700">Nombre completo:</label>
-                <input 
-                    type="text" 
-                    id="name" 
-                    name="name" 
-                    placeholder="Escribe tu nombre" 
-                    required 
-                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-                >
-            </div>
-            <div class="mb-4">
-                <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico:</label>
-                <input 
-                    type="email" 
-                    id="email" 
-                    name="email" 
-                    placeholder="Escribe tu correo" 
-                    required 
-                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-                >
-            </div>
-            <div class="mb-4">
-                <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono:</label>
-                <input 
-                    type="tel" 
-                    id="phone" 
-                    name="phone" 
-                    placeholder="Escribe tu número de teléfono" 
-                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-                >
-            </div>
-            <div class="mb-4">
-                <label for="message" class="block text-sm font-medium text-gray-700">Mensaje:</label>
-                <textarea 
-                    id="message" 
-                    name="message" 
-                    rows="4" 
-                    placeholder="Escribe tu mensaje aquí..." 
-                    required 
-                    class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
-                ></textarea>
-            </div>
-            <button 
-                type="submit" 
-                class="w-full bg-gray-900 text-white font-medium py-2 px-4 rounded-md hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            >
-                Enviar
-            </button>
-        </form>              
+<!-- Formulario de Contacto -->
+<div id="form" class="max-w-lg mx-auto mt-10 bg-white p-6 rounded-lg shadow-lg">
+  <h1 class="bg-gray-950 rounded-md text-2xl font-bold text-center text-gray-50">Contáctanos</h1>
+  <p class="text-gray-600 text-center mt-2">¡Nos encantaría saber de ti!</p>
+  <form action="/submit" method="POST" class="mt-6">
+    <div class="mb-4">
+      <label for="name" class="block text-sm font-medium text-gray-700">Nombre completo:</label>
+      <input 
+        type="text" 
+        id="name" 
+        name="name" 
+        placeholder="Escribe tu nombre" 
+        required 
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      >
     </div>
+    <div class="mb-4">
+      <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico:</label>
+      <input 
+        type="email" 
+        id="email" 
+        name="email" 
+        placeholder="Escribe tu correo" 
+        required 
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      >
+    </div>
+    <div class="mb-4">
+      <label for="phone" class="block text-sm font-medium text-gray-700">Teléfono:</label>
+      <input 
+        type="tel" 
+        id="phone" 
+        name="phone" 
+        placeholder="Escribe tu número de teléfono" 
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-gray-500 focus:border-indigo-500"
+      >
+    </div>
+    <div class="mb-4">
+      <label for="message" class="block text-sm font-medium text-gray-700">Mensaje:</label>
+      <textarea 
+        id="message" 
+        name="message" 
+        rows="4" 
+        placeholder="Escribe tu mensaje aquí..." 
+        required 
+        class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+      ></textarea>
+    </div>
+    <button 
+      type="submit" 
+      class="w-full bg-gray-700 text-white font-medium py-2 px-4 rounded-md hover:bg-gray-950 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+    >
+      Enviar
+    </button>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="bg-neutral-900 text-center py-6 text-gray-50 mt-20">
+  © 2024 Pianos López. Todos los derechos reservados.
 </footer>
-  <div class="bg-black p-4 text-center text-surface dark:text-white">
-    ©  Copyright:
-    <a href="Pianoa Lopez">Pianoa Lopez</a>
-  </div>
-</footer>
+</body>
 </html>
